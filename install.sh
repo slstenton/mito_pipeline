@@ -54,78 +54,24 @@ M38_V=mm10.fasta
 MTM_V=mouse_mt.fasta
 M38S_V=mm10.size
 
-#ASK USER OPINION
-echo -e "\x1b[30;43m Do you want basic installation (all tools and genomes installed by default)? (yes/no, no will take you to advanced installation): \x1b[m"
-read BASIC;
 
-if [ "$BASIC" == "no" ]; then
-  echo -e "\n\n\x1b[30;43m Starting advanced installation, answer yes or no to the following queries below: \x1b[m"
-  echo -e "\x1b[97;41m Erase existing files and create fresh (backup data from tab/indel folders)? (yes/no): \x1b[m"
-  read FOLDER;
-
-  echo -e "\x1b[97;41m Download and compile hisat2? (yes/no): \x1b[m"
-  read HISAT;
-
-  echo -e "\x1b[97;41m Download and compile bedtools2? (yes/no): \x1b[m"
-  read BEDTOOLS;
-
-  echo -e "\x1b[97;41m Download and compile bbmap? (yes/no): \x1b[m"
-  read BBMAP;
-
-  echo -e "\x1b[97;41m Download and compile last? (yes/no): \x1b[m"
-  read LAST;
-
-  echo -e "\x1b[97;41m Download and compile samtools? (yes/no): \x1b[m"
-  read SAMTOOL;
-
-  echo -e "\x1b[97;41m Download and compile sambamba? (yes/no): \x1b[m"
-  read SAMBAMBA;
-
-  echo -e "\x1b[97;41m Get UCSC utilities? (yes/no): \x1b[m"
-  read UCSC;
-
-  echo -e "\x1b[97;41m Download human genome and extract Mt sequence? (yes/no): \x1b[m"
-  read HUMAN;
-
-  echo -e "\x1b[97;41m Build human indexes? (yes/no): \x1b[m"
-  read HINDEX;
-
-  echo -e "\x1b[97;41m Download mouse genome and extract Mt sequence? (yes/no): \x1b[m"
-  read MOUSE;
-
-  echo -e "\x1b[97;41m Build mouse indexes? (yes/no): \x1b[m"
-  read MINDEX;
-
-  echo -e "\x1b[97;41m Install R package Plotrix? (yes/no): \x1b[m"
-  read PLOTRIX;
-
-  echo -e "\x1b[97;41m Install R package RColorBrewer? (yes/no): \x1b[m"
-  read RCB;
-
-  echo -e "\x1b[97;41m Number of threads to use for building hisat index (your system info is given below): \x1b[m"
-  lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
-  read THREADS;
-fi
-
-if [ "$BASIC" == "yes" ]; then
-  FOLDER=yes
-  HISAT=yes
-  BEDTOOLS=yes
-  BBMAP=yes
-  LAST=yes
-  SAMTOOL=yes
-  SAMBAMBA=yes
-  UCSC=yes
-  HUMAN=yes
-  HINDEX=yes
-  MOUSE=yes
-  MINDEX=yes
-  PLOTRIX=yes
-  RCB=yes
-  echo -e "\x1b[97;41m Number of threads to use for building hisat index (your system info is given below): \x1b[m"
-  lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
-  read THREADS;
-fi
+FOLDER=yes
+HISAT=yes
+BEDTOOLS=yes
+BBMAP=yes
+LAST=yes
+SAMTOOL=yes
+SAMBAMBA=yes
+UCSC=yes
+HUMAN=yes
+HINDEX=yes
+MOUSE=yes
+MINDEX=yes
+PLOTRIX=yes
+RCB=yes
+echo -e "\x1b[97;41m Number of threads to use for building hisat index (your system info is given below): \x1b[m"
+lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
+read THREADS;
 
 echo -e "\n\n\x1b[30;43m $now: Ok! based on your selection it may take upto two hours to complete all the download and compiling!\x1b[m"
 #CLEAN DATA
