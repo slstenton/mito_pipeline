@@ -54,7 +54,6 @@ M38_V=mm10.fasta
 MTM_V=mouse_mt.fasta
 M38S_V=mm10.size
 
-
 FOLDER=yes
 HISAT=yes
 BEDTOOLS=yes
@@ -69,9 +68,9 @@ MOUSE=yes
 MINDEX=yes
 PLOTRIX=yes
 RCB=yes
-echo -e "\x1b[97;41m Number of threads to use for building hisat index (your system info is given below): \x1b[m"
-lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
-read THREADS;
+#echo -e "\x1b[97;41m Number of threads to use for building hisat index (your system info is given below): \x1b[m"
+#lscpu | grep -E '^Thread|^Core|^Socket|^CPU\('
+#read THREADS;
 
 echo -e "\n\n\x1b[30;43m $now: Ok! based on your selection it may take upto two hours to complete all the download and compiling!\x1b[m"
 #CLEAN DATA
