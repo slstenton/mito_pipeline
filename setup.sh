@@ -64,8 +64,8 @@ SAMBAMBA=yes
 UCSC=yes
 HUMAN=yes
 HINDEX=yes
-MOUSE=yes
-MINDEX=yes
+MOUSE=no
+MINDEX=no
 PLOTRIX=yes
 RCB=yes
 #echo -e "\x1b[97;41m Number of threads to use for building hisat index (your system info is given below): \x1b[m"
