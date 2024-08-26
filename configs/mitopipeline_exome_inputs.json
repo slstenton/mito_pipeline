@@ -1,0 +1,1 @@
+{"mitopipeline.MToolBox_config":"${}","mitopipeline.MitoSAlt_config":"${}","mitopipeline.cram":"${this.input_cram}","mitopipeline.name":"${this.sample_id}","mitopipeline.refFasta":"${workspace.referenceData_hg38_ref_fasta}","mitopipeline.refFastaIndex":"${workspace.referenceData_hg38_ref_fasta_index}","mitopipeline.runtime_cpu":"${8}","mitopipeline.runtime_preemptible":"${2}"}
