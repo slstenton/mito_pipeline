@@ -14,7 +14,7 @@ TMPFILE=`mktemp`
 PWD=`pwd`
 now=`date`
 
-#SOFTWARES
+#SOFTWARE
 HISAT2_URL=ftp://ftp.ccb.jhu.edu/pub/infphilo/hisat2/downloads/hisat2-2.1.0-Linux_x86_64.zip
 HISAT2_V=hisat2-2.1.0
 BBMAP_URL=https://downloads.sourceforge.net/project/bbmap/BBMap_38.05.tar.gz
